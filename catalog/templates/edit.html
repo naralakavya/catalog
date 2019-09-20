@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form action="{{url_for('editData',register_id=register.id)}}" method="post">
+ <div class="container">
+    <h1>Registration page</h1>
+    <hr>
+    <label for="name"><b>name:</b ></label>
+    <input type="text" placeholder="Enter name" name="name" class="form-control" value="{{register.name}}"><br>
+    
+   
+     <label for="surname"><b>surname:</b ></label> 
+     <input type="text" placeholder="Enter surname" name="surname" class="form-control" value="{{register.surname}}"><br> 
+
+     <label for="mobile"><b>mobile:</b></label>
+     <input type="text" placeholder="Enter mobile" name="mobile" class="form-control" value="mobile"><br> 
+
+    <label for="email"><b>Email:</b></label>
+    <input type="text" placeholder="Enter Email" name="email" class="form-control" value="email"><br>
+
+     <label for="branch"><b>Branch:</b></label> 
+     <input type="text" placeholder="Enter branch" name="branch" class="form-control" value="branch"><br> 
+
+     <label for="role"><b>role:</b></label> 
+     <input type="text" placeholder="enter role number" name="role" class="form-control" value="role"><br> 
+    <hr> 
+     <button type="submit" class="registerbtn">Register</button>
+     <button type="button" class="registerbtn"><a href="{{url_for('regpage')}}">cancel</button>
+  </div>
+
+  <div class="container signin">
+  </div>
+</form>
+</body>
+</html>
